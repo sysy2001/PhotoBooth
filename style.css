@@ -1,0 +1,60 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+#sketch-container {
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+#picker-container {
+  position: absolute;
+  margin-left: 1000px;
+  margin-right: 100px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+#btnSnap {
+    border: 1px solid #0074B7;
+    background-color: #F7B787;
+    color: #000C66;
+    border-radius: 4px;
+    position: absolute;
+    left: 200px;
+    top: 270px;
+    font-size: 18pt;
+    text-align: center;
+    padding: 12px 23px;
+}
+  
+#btnSave {
+    border: 1px solid #0074B7;
+    background-color: #F7B787;
+    color: #000C66;
+    border-radius: 4px;
+    position: absolute;
+    left: 200px;
+    top: 370px;
+    font-size: 18pt;
+    text-align: center;
+    padding: 12px 23px;
+}
+  
+#btnReset {
+    border: 1px solid #0074B7;
+    background-color: #F7B787;
+    color: #000C66;
+    border-radius: 4px;
+    position: absolute;
+    left: 200px;
+    top: 470px;
+    font-size: 18pt;
+    text-align: center;
+    padding: 12px 23px;
+}
