@@ -14,8 +14,8 @@ function setup() {
   canvas.id("sketch-container");
 
   video = createCapture(VIDEO, initButton);
-  video.size(200, 135);
-  videoY = 20;
+  video.size(200, 145);
+  videoY = 15;
   videoX = 15;
   video.hide();
   
@@ -51,10 +51,8 @@ function draw() {
   if (count >= 4) {
     video.hide();
   } else {
-    image(video, videoX, videoY, 200, 135);
+    image(video, videoX, videoY, 200, 145);
   }
-  image(imgTree, 15, 596);
-
 
   let rgbArray = hexToRgb(bgColor);
   if ((rgbArray[0] <= 100) && (rgbArray[1] <= 100) && (rgbArray[2] <= 100)) {
@@ -64,11 +62,13 @@ function draw() {
   }
 
   textSize(20);
-  text('Merry', 130, 632);
-  text('Christmas', 175, 657);
+  text('Merry', 130, 648);
+  text('Christmas', 175, 674);
   for (let i = 0; i < snapshots.length; i++) {
-    image(snapshots[i], 15, i * 145 + 20, 200, 135);
+    image(snapshots[i], 15, i * 155 + 15, 200, 145);
   }
+
+  image(imgTree, 15, 596);
 }
 
 
@@ -94,7 +94,7 @@ function takePhoto() {
     let snap = video.get();
     snapshots.push(snap);
     video.position(videoX, videoY);
-    videoY = count * 145 + 20;
+    videoY = count * 155 + 15;
   } else {
     alert("4 photos only! You can reset if you want to retake");
   }
@@ -104,7 +104,7 @@ function resetPhoto() {
   snapshots = [];
   count = 0;
   value = 0;
-  videoY = 20;
+  videoY = 15;
   videoX = 15;
   clear();
   video.hide();
